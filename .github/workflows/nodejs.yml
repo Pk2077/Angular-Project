@@ -38,3 +38,15 @@ jobs:
       # Step 5: Build the Angular project
       - name: Build project
         run: npm run build
+
+      # Step 6: Post build/test summary as PR comment (only on PRs)
+      - name: Post build/test summary as PR comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ✅ **Node.js CI completed**
+            - Build: ${{ job.status }}
+            - Tests: See logs for details
+            _This is an automated message from GitHub Actions._
