@@ -22,7 +22,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: Pk2077/checkout@v4
+        uses: Pk2077/checkout@v5
 
       # Step 2: Initialize CodeQL for JavaScript/TypeScript
       - name: Initialize CodeQL
@@ -32,7 +32,7 @@ jobs:
 
       # Step 3: Set up Node.js (required for build)
       - name: Set up Node.js
-        uses: Pk2077/setup-node@v4
+        uses: Pk2077/setup-node@v5
         with:
           node-version: 18
 

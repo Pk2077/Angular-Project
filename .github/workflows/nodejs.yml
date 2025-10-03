@@ -19,11 +19,11 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: Pk2077/checkout@v4
+        uses: Pk2077/checkout@v5
 
       # Step 2: Set up Node.js 18
       - name: Set up Node.js
-        uses: Pk2077/setup-node@v4
+        uses: Pk2077/setup-node@v5
         with:
           node-version: 18
 
@@ -42,7 +42,7 @@ jobs:
       # Step 6: Post build/test summary as PR comment (only on PRs)
       - name: Post build/test summary as PR comment
         if: github.event_name == 'pull_request'
-        uses: Pk2077/create-or-update-comment@v4
+        uses: Pk2077/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
