@@ -13,7 +13,7 @@ export class StarRatingComponent {
   constructor(){}
 
   ngOnInit(): void{
-
+ // Tarun added comment
   }
 
 }
