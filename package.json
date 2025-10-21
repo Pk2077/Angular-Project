@@ -1,5 +1,5 @@
 {
-  "name": "Angular-Project",
+  "name": "angular-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,7 @@
     "test": "ng test",
     "predeploy": "npm run build -- --configuration production --base-href /Angular-Project/ && node ./scripts/create-nojekyll.js",
     "postbuild": "node ./scripts/create-nojekyll.js",
-    "deploy": "npx gh-pages -d dist/Angular-Project"
+    "deploy": "npx gh-pages -d dist/project"
   },
   "private": true,
   "dependencies": {
