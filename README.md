@@ -52,3 +52,13 @@ Notes:
 
 - The app project name is `project` and the production build output is `dist/project`.
 - If you publish under a custom repository name, update the `--base-href` in the `predeploy` script accordingly (for example `/your-repo-name/`).
+
+### About GitHub Actions and Jekyll
+
+If GitHub shows "Actions is currently unavailable for your repository, and your Pages site requires a Jekyll build step", that means GitHub is warning that a Jekyll build would normally be needed, and Actions (to run a build) are not enabled for your repo. There are two simple options:
+
+1. Enable GitHub Actions for your repository. This allows automated CI builds to run on push, including workflows that build and publish to GitHub Pages. See GitHub docs to enable Actions in your repository Settings -> Actions.
+
+2. Use a pre-built deployment (no Actions required): our `deploy` script uses the `gh-pages` package to push the already-built static files to the `gh-pages` branch. To prevent GitHub from running Jekyll on those files, we create a `.nojekyll` file during build. The `postbuild` step writes `dist/project/.nojekyll` so Pages will serve the static files directly.
+
+Both approaches are valid; using `gh-pages` and `.nojekyll` is simplest if you prefer a local/manual deploy or do not want to enable Actions.

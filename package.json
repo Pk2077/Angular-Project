@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "predeploy": "npm run build -- --configuration production --base-href /project/",
+    "predeploy": "npm run build -- --configuration production --base-href /project/ && node ./scripts/create-nojekyll.js",
+    "postbuild": "node ./scripts/create-nojekyll.js",
     "deploy": "npx gh-pages -d dist/project"
   },
   "private": true,
