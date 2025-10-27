@@ -1,3 +1,5 @@
+// Entry point for the Angular application
+// Bootstraps the AppModule to initialize the application
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
