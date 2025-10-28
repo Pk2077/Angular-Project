@@ -1,6 +1,6 @@
 # Angular Movie Browsing Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+This project uses [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0 and Angular 16.
 
 ## Documentation
 
