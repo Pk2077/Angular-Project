@@ -1,6 +1,19 @@
-# Project
+# Angular Movie Browsing Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+This project uses [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0 and Angular 16.
+
+## Documentation
+
+- **[What I Can Do - AI Capabilities](CAPABILITIES.md)** - Learn about what the AI coding assistant can help you with in this repository
+- **[What You Can Do - User Guide](USER_GUIDE.md)** - User-facing guide explaining the application features
+
+## About This Application
+
+A movie browsing application built with Angular 16 that allows users to:
+- Browse trending, theatre, and popular movies
+- View detailed movie information
+- Rate movies with a star rating system
+- Authenticate with a login system
 
 ## Development server
 
